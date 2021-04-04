@@ -84,7 +84,7 @@ function App() {
       <PokemonForm pokemonName={pokemonName} onSubmit={handleSubmit} />
       <hr />
       <div className="pokemon-info">
-        <ErrorBountry errorBountryFallback={PokemonInfoErrorBountry}>
+        <ErrorBountry key={pokemonName} errorBountryFallback={PokemonInfoErrorBountry}>
           <PokemonInfo pokemonName={pokemonName} />
         </ErrorBountry>
       </div>
